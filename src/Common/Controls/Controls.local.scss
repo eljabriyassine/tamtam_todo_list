@@ -1,0 +1,41 @@
+@import "styles/base/variables";
+
+:global(#controls) {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 5rem;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 5;
+  background-color: #fff;
+  box-shadow: 0 0 1.2rem 0 rgba(44, 43, 63, 0.3);
+  transform: translateY(100%);
+  transition: nth($transitions, 4);
+  &:global(.display) {
+    transform: translateY(0);
+  }
+
+  button {
+    transition: 1s all;
+  }
+
+  .svg_icons {
+    margin-left: 0.3rem;
+    margin-right: -0.4rem;
+    path {
+      fill: #FFF;
+    }
+  }
+
+  .loading {
+    width: 20px;
+    margin-left: 0.5rem;
+    margin-right: -0.1rem;
+  }
+
+  .controls__label {
+    padding: 0 1rem;
+  }
+}

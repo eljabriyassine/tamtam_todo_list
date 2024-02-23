@@ -1,0 +1,70 @@
+@import "styles/base/variables";
+
+.ttp_switch {
+  position: absolute;
+  opacity: 0;
+
+  &.neutral {
+    justify-content: center;
+
+    + div > div {
+      background-color: #fff;
+      transform: translate3d(0.44rem, 0, 0);
+    }
+  }
+
+  & + div {
+    vertical-align: middle;
+    box-shadow: $shadow-like-border;
+    border-radius: 2rem;
+    background-color: #fff;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    -webkit-transition-property: background-color, box-shadow;
+    transition-property: background-color, box-shadow;
+    cursor: pointer;
+    width: 2.2rem;
+    height: 1.35rem;
+    & > div {
+      float: left;
+      width: 1.2rem;
+      height: 1.2rem;
+      border-radius: inherit;
+      background: #ffffff;
+      -webkit-transition-timing-function: cubic-bezier(1, 0, 0, 1);
+      transition-timing-function: cubic-bezier(1, 0, 0, 1);
+      -webkit-transition-duration: 0.4s;
+      transition-duration: 0.4s;
+      -webkit-transition-property: transform, background-color;
+      transition-property: transform, background-color;
+      pointer-events: none;
+      margin-top: 0.07rem;
+      margin-left: 0.07rem;
+      box-shadow: $shadow-like-border;
+    }
+    span {
+      position: absolute;
+      font-size: 1.6rem;
+      color: white;
+      margin-top: 12px;
+      &:nth-child(1) {
+        margin-left: 15px;
+      }
+      :nth-child(2) {
+        margin-left: 55px;
+      }
+    }
+  }
+  &:checked {
+    & + div {
+      width: 2.2rem;
+      background-position: 0 0;
+      background-color: #18a0fb;
+      & > div {
+        background-color: #ffffff;
+        -webkit-transform: translate3d(0.88rem, 0, 0);
+        transform: translate3d(0.88rem, 0, 0);
+      }
+    }
+  }
+}

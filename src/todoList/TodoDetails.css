@@ -1,0 +1,30 @@
+.detail_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.detail_container_child{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    /* margin: 0 40px; */
+    /* justify-content: space-between; */
+}
+
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .checkbox:checked {
+    background-color: #A700EE;
+  }
+
+ .button_delete{
+    border-color: white;
+    background-color: F8F8F8;
+    cursor: pointer;
+ }

@@ -1,0 +1,209 @@
+@import "styles/base/variables";
+@mixin save_button-style {
+  background: #06d9b1;
+  box-shadow: 0px 4px 10px rgba(41, 57, 77, 0.1);
+  border-radius: 5px;
+  width: 175px;
+  height: 38px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: none;
+  }
+
+  &:disabled {
+    box-shadow: none;
+    opacity: 0.3;
+  }
+
+  img {
+    width: 0px;
+    height: 20px;
+    margin-right: 0;
+    transition: all 0.5s ease;
+  }
+
+  img.loading {
+    width: 20px;
+    margin-right: 1rem;
+    margin-left: -0.8rem;
+  }
+}
+
+.ripple_loading_adapted {
+  text-align: center;
+  margin-top: 10rem;
+}
+
+.associate_content {
+  font-family: Roboto;
+  font-style: normal;
+
+  .labels_form_block {
+    margin: auto;
+    width: 100%;
+    height: auto;
+  }
+  .header_btn {
+    @include save_button-style;
+    display: flex;
+    margin-top: -4rem;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    margin-right: 2rem;
+    @media screen and (max-width: 1700px) and (min-width: 1500px) {
+      &.header_btn {
+        margin-right: 2.5rem;
+      }
+    }
+    // more than 150%
+    @media screen and (max-width: 1400px) {
+      &.header_btn {
+        margin-right: 1.9rem;
+      }
+    }
+    @media screen and (min-width: 1700px) {
+      &.header_btn {
+        margin-right: 2.9rem;
+      }
+    }
+  }
+  // Contenu Slide d'association des Dashboards
+  .association_header {
+    width: 95%;
+    height: 45px;
+    margin: 17px auto 0px;
+    background: #3c4e64;
+    border-radius: 4px;
+    padding: 17px 20px;
+    font-size: 15px;
+    line-height: 17px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+      box-shadow: none;
+    }
+
+    .icon {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: all 0.7s ease;
+
+      &.expanded {
+      }
+
+      &.collapsed {
+        transform: rotate(-180deg) translate(50%, 50%);
+      }
+    }
+  }
+
+  .association_matrice {
+    &.matrice_expanded {
+      transition: all 0.5s ease;
+    }
+
+    &.matrice_collapsed {
+      overflow: hidden;
+      max-height: 0;
+    }
+
+    & > table {
+      width: 95.5%;
+      margin: auto;
+      border-collapse: separate;
+
+      .matrice_line {
+        height: 35px;
+
+        & > td {
+          border-radius: 5px;
+          background: #f8f9fa;
+          padding: 0;
+          & > div {
+            display: flex;
+            //margin-right: 10px;
+            //justify-content: flex-end;
+            justify-content: center;
+            margin-left: 19.7%;
+          }
+          & > span.cellule_check {
+            display: flex;
+            justify-content: center;
+          }
+          & > span.cellule_th {
+            display: flex;
+            margin-left: 13px;
+            justify-content: left;
+            color: #29394d;
+          }
+        }
+
+        & > th {
+          //min-width: 50px;
+          min-width: 46px;
+          border-radius: 5px;
+          background: #dee2e6;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 26px;
+          font-size: 15px;
+          color: #29394d;
+          text-align: center;
+          & > span {
+            display: flex;
+            min-width: 150px;
+            //margin-left: 10px;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+
+  .actions_block {
+    margin: 25px auto 0px;
+    width: 95%;
+    text-align: right;
+    border-top: 1px solid rgba(109, 127, 146, 0.2);
+    padding-top: 8px;
+    display: flex;
+    justify-content: space-between;
+
+    .cancel_btn {
+      width: 110px;
+      height: 38px;
+      border: 1px solid rgba(109, 127, 146, 0.5);
+      box-sizing: border-box;
+      border-radius: 5px;
+      cursor: pointer;
+
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 19px;
+      text-transform: uppercase;
+      color: #6d7f92;
+    }
+
+    .save_button {
+      @include save_button-style;
+      margin-left: 8px;
+    }
+  }
+}

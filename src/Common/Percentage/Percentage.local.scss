@@ -1,0 +1,13 @@
+.percentage {
+  &__positive {
+    color: #18A0FB;
+  }
+
+  &__negative {
+    color: #FB235B;
+  }
+
+  &__na {
+    color: #6d7f92;
+  }
+}

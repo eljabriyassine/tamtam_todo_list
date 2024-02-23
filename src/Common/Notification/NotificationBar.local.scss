@@ -1,0 +1,70 @@
+@import "styles/base/variables";
+
+$pageContainerGap: 6.75rem;
+$redOrange: #fb1e5b;
+$greenTeal: #06d9b1;
+$greenTealLight: #edfaf5;
+$lightOrange: #ffb341c9;
+
+.wrapper {
+  height: 53px;
+  padding: 0 $pageContainerGap;
+
+  &.redOrange {
+    background-color: $redOrange;
+  }
+
+  &.greenTeal {
+    background-color: $greenTeal;
+  }
+  &.lightOrange {
+    background-color: $lightOrange;
+  }
+
+  .message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    &.greenTeal {
+      color: $greenTealLight;
+
+      .icon {
+        svg {
+          fill: $greenTeal !important;
+          & > g > path {
+            fill: white;
+          }
+        }
+      }
+    }
+    .seeMore {
+      margin-left: 5px;
+      text-transform: capitalize;
+      cursor: pointer;
+      text-decoration: underline;
+      color: #3c4e64;
+    }
+
+    &.redOrange {
+      color: #fff;
+
+      .icon {
+        svg {
+          fill: #fff;
+        }
+      }
+    }
+  }
+
+  .close_icon {
+    text-align: end;
+
+    svg {
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+@mixin label-text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #29394d;
+}
+
+.cardsContent {
+  cursor: pointer;
+  width: 95% !important;
+  background: linear-gradient(0deg, #f1f2f4, #f1f2f4), #d0fff6 !important;
+  border: 1px solid #f1f2f4 !important;
+  box-sizing: border-box !important;
+  border-radius: 5px !important;
+  transition: all 0.3s linear !important;
+  &:hover {
+    //background: #ffffff !important;
+    background: linear-gradient(0deg, #ffffff, #ffffff), #d0fff6 !important;
+    border: 1px solid var(--hover-color) !important;
+    box-sizing: border-box !important;
+    border-radius: 5px !important;
+    box-shadow: 0px 4px 10px rgba(41, 57, 77, 0.1);
+  }
+  &.cardActivated {
+    background: linear-gradient(0deg, #ffffff, #ffffff), #d0fff6 !important;
+    border: 1px solid var(--hover-color) !important;
+    box-sizing: border-box !important;
+    border-radius: 5px !important;
+    box-shadow: 0px 4px 10px rgba(41, 57, 77, 0.1);
+  }
+  .cardBodyGeneric {
+    align-items: center;
+    padding: 0.9rem 0.2rem 0.8rem 0.2rem;
+
+    p {
+      @include label-text;
+      font-size: 18px;
+      line-height: 21px;
+      margin-bottom: 0 !important;
+    }
+    .labelNumber {
+      @include label-text;
+      font-size: 24px;
+      line-height: 28px;
+      float: right;
+      display: inline-flex;
+      white-space: pre;
+    }
+    .generalTotalNumber {
+      font-size: 15px;
+      margin-top: 3px;
+    }
+  }
+  .cardBody {
+    align-items: center;
+    padding: 0.2rem 0.2rem 0.2rem 0.2rem;
+    p {
+      @include label-text;
+      font-size: 14px;
+      line-height: 16px;
+      margin-bottom: 0.5rem !important;
+    }
+    .card-text {
+      @include label-text;
+      font-size: 18px;
+      line-height: 21px;
+    }
+    .folderIcon {
+      float: right;
+      margin-bottom: 1rem;
+    }
+    .generalFolderNumber {
+      font-size: 12px;
+    }
+  }
+  .progressBar {
+    pointer-events: none;
+  }
+}

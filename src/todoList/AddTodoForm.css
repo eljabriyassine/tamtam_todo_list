@@ -1,0 +1,33 @@
+/* AddTodoForm.css */
+
+.add-todo-form {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .add-todo-input {
+    flex: 1;
+    padding: 10px;
+    background-color: #f3f3f3;
+    border: none; /* Remove border for better aesthetics */
+  }
+  
+  .add-todo-button,
+  .cancel-todo-button {
+    width: 120px;
+    height: 45px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 700;
+    font-size: 20.26px;
+    line-height: 23.74px;
+  }
+  
+  .add-todo-button {
+    background-color: #9333ea;
+  }
+  
+  .cancel-todo-button {
+    background-color: #6b7280;
+  }
+  
